@@ -106,9 +106,6 @@ enter password <asp:TextBox ID="txtcpass" runat="server" TextMode="Password" ></
                </td>
 </tr>
                </table>
-
-        
-              
      <table align="center">
                <tr>
                    <td>
@@ -119,10 +116,12 @@ enter password <asp:TextBox ID="txtcpass" runat="server" TextMode="Password" ></
             <table align="center">
            <tr>
             <td>
-            <asp:Button ID="btnsubmit" runat="server" Text="Submit" />
+            <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" />
         </td>
     </tr>
 </table>
+                          <asp:Label ID="lblre" runat="server"></asp:Label>
+                          
 
         </div>
     </form>
