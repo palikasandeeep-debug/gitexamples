@@ -72,7 +72,7 @@
                      
           <tr>
     <td>
-enter password <asp:TextBox ID="txtcpass" runat="server" TextMode="Password" ></asp:TextBox>
+enter confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Password" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="Rfvcpass" runat="server" ControlToValidate="txtcpass" ErrorMessage="pls enter password" ForeColor="Red" >
         </asp:RequiredFieldValidator>  
         <asp:CompareValidator ID="cvpass" runat="server" ControlToValidate="txtcpass" ControlToCompare="txtpass" ForeColor="Red" ErrorMessage="password is not matched ">
@@ -120,7 +120,7 @@ enter password <asp:TextBox ID="txtcpass" runat="server" TextMode="Password" ></
         </td>
     </tr>
 </table>
-                          <asp:Label ID="lblre" runat="server"></asp:Label>
+         
                           
 
         </div>

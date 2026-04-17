@@ -11,13 +11,23 @@ namespace gitexamples
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
+            lblmsg.Text=" Person Details are:"+"<br>"+"fistname:"+" "+txtfname.Text+"<br>"+"last name:"+" "+txtlname.Text+"<br>"+"email:"+" "+txtemail.Text+"<br>"+"password :"+" "+txtpass.Text+
+               "<br>"+ "confirm password :"+" "+txtcpass.Text+"<br>"+"gender:"+" "+radiogen.SelectedValue;
 
+            txtemail.Text = "";
+            txtlname.Text = "";
+            txtfname.Text = "";
+            txtmob.Text = "";
+            radiogen.Text = "";
+            
 
         }
+        
+                
     }
 }
