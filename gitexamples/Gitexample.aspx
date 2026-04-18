@@ -93,6 +93,14 @@ enter confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Passw
                        </td>
                
                    </tr>
+           <tr>
+               <td>
+                   enter age<asp:TextBox ID="txtage" runat="server" ></asp:TextBox>
+                   <asp:CustomValidator ID="cvage" runat="server" OnServerValidate="servercustumvalidator" ForeColor="Red" ErrorMessage="age should be with in 18and 60 ">
+
+                   </asp:CustomValidator>
+               </td>
+           </tr>
          
               
        
@@ -105,21 +113,24 @@ enter confirm password <asp:TextBox ID="txtcpass" runat="server" TextMode="Passw
     runat="server" />
                </td>
 </tr>
+
+
                </table>
      <table align="center">
                <tr>
                    <td>
-                       <asp:Label ID="lblmsg" runat="server" ForeColor="Beige" BackColor="Blue"></asp:Label>
+                       <asp:Label ID="lblmsg" runat="server" ForeColor="Blue" BackColor="Yellow"></asp:Label>
                    </td>
                </tr>
            </table>
             <table align="center">
            <tr>
             <td>
-            <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" />
+            <asp:Button ID="btnsubmit" runat="server" Text="Submit"  OnClick="btnsubmit_Click" />
         </td>
     </tr>
 </table>
+                       
          
                           
 

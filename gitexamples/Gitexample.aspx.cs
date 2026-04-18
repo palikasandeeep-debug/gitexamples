@@ -16,18 +16,33 @@ namespace gitexamples
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            lblmsg.Text=" Person Details are:"+"<br>"+"fistname:"+" "+txtfname.Text+"<br>"+"last name:"+" "+txtlname.Text+"<br>"+"email:"+" "+txtemail.Text+"<br>"+"password :"+" "+txtpass.Text+
-               "<br>"+ "confirm password :"+" "+txtcpass.Text+"<br>"+"gender:"+" "+radiogen.SelectedValue;
+            lblmsg.Text = " Person Details are:" + "<br>" + "fistname:" + " " + txtfname.Text + "<br>" + "last name:" + " " + txtlname.Text + "<br>" + "email:" + " " + txtemail.Text + "<br>" + "password :" + " " + txtpass.Text +
+               "<br>" + "confirm password :" + " " + txtcpass.Text + "<br>" + "gender:" + " " + radiogen.SelectedValue+"<br>"+"ur age is:"+" "+txtage.Text;
 
             txtemail.Text = "";
             txtlname.Text = "";
             txtfname.Text = "";
             txtmob.Text = "";
-            radiogen.Text = "";
-            
+            radiogen.SelectedIndex = -1;
+
+
 
         }
-        
-                
+        protected void servercustumvalidator(object source,ServerValidateEventArgs args)
+        {
+            int age;
+            if(int.TryParse(txtage.Text,out age))
+             {
+                args.IsValid = (age >= 18 && age <= 60);
+
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
+
+
+
     }
 }
